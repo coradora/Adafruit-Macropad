@@ -1,12 +1,12 @@
-# Macro configuration for my Windows boot. Relies on pinned programs
-# in the task bar to open up programs.
+# Macro configuration for my Linux installs. Uses openbox rc.xml keybinds
+# to open up applications and perform functions. 
 
 # //todo, utilizing ConsumerControl to control volume. 
 
 from adafruit_hid.keycode import Keycode  # REQUIRED if using Keycode.* values
 
 app = {  # REQUIRED dict, must be named 'app'
-    "name": "WIN HOME",  # Application name
+    "name": "LINUX HOME",  # Application name
     "macros": [  # List of button macros...
         # COLOR    LABEL    KEY SEQTEAM
         # 1st row ----------
@@ -18,16 +18,15 @@ app = {  # REQUIRED dict, must be named 'app'
         (0x193375, "Vol +", [Keycode.CONTROL, Keycode.ALT, Keycode.SHIFT, Keycode.EQUALS]),
         (0x193375, "Down", " "),  # Scroll down
         # 3rd row ----------
-        (0x5B1975, "Taskmgr", [Keycode.CONTROL, Keycode.SHIFT, Keycode.ESCAPE]),
-        (0x5B1975, "Term", [Keycode.WINDOWS, "2"]),  # For opening personal programs they must be pinned to taskbar.
-        # The bind number is tied to the order on the task bar (1 indexed)
-        (0x5B1975, "Chrome", [Keycode.WINDOWS, "1"]),
+        (0x5B1975, "Thunar", [Keycode.WINDOWS, Keycode.N]),
+        (0x5B1975, "Term", [Keycode.WINDOWS, Keycode.ENTER]),  
+        (0x5B1975, "Firefox", [Keycode.WINDOWS, Keycode.W]),
         # 4th row ----------
         (0xE07516, "Copy", [Keycode.CONTROL, "c"]),
         (0xE07516, "Paste", [Keycode.CONTROL, "v"]),
         (0xE07516, "Snip", [Keycode.WINDOWS, Keycode.SHIFT, Keycode.S]), 
         # Encoder button ---
-        (0x000000, "", [Keycode.CONTROL, "w"]),  # Close tab
+        (0x000000, "", [Keycode.WINDOWS, "q"]),  # Close tab
     ],
 }
 # Write your code here :-)

@@ -1,4 +1,5 @@
-# MACROPAD Hotkeys example: Universal Numpad
+# Macro configuration for Final Fantasy XI. Useful for those 
+# without a function row on their keyboard.
 
 from adafruit_hid.keycode import Keycode  # REQUIRED if using Keycode.* values
 

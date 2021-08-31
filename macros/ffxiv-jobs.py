@@ -1,4 +1,6 @@
-# MACROPAD Hotkeys example: Universal Numpad
+# Macro configuration for Final Fantasy XIV. If you want to use these,
+# bind these keys to a hotbar within the game, then drag the appropriate
+# gear sets to the hotbar. 
 
 from adafruit_hid.keycode import Keycode  # REQUIRED if using Keycode.* values
 
